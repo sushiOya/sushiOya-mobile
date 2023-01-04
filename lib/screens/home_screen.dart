@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Image.asset('images/icons/bookmark.png'),
+                    icon: Image.asset('asset/images/icons/bookmark.png'),
                     padding: EdgeInsets.zero,
                     constraints: BoxConstraints.tight(const Size(24, 24)),
                   ),
@@ -27,76 +27,96 @@ class HomeScreen extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Image.asset('images/icons/notification.png'),
+                    icon: Image.asset('asset/images/icons/notification.png'),
                     padding: EdgeInsets.zero,
                     constraints: BoxConstraints.tight(const Size(24, 24)),
                   ),
                 ],
               ),
             ],
-            title: Image.asset('images/logo.png'),
+            title: Image.asset('asset/images/logo.png'),
             titleSpacing: 0,
             centerTitle: false,
           ),
         ),
       ),
-      body: Stack(
+      body: Column(
         children: [
           Container(
-            width: double.infinity,
-            height: 159,
-            child: Image.asset('images/banner/main_banner.png',
-                fit: BoxFit.fitWidth),
+            color: Colors.white,
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+            child: TextField(
+              decoration: InputDecoration(
+                  enabledBorder: const UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black)),
+                  hintStyle: const TextStyle(
+                    fontSize: 15,
+                    color: Color(0XFF94A0B8),
+                    fontWeight: FontWeight.w400,
+                  ),
+                  hintText: '찾고있는 오마카세가 있으신가요?',
+                  suffixIcon: Image.asset('asset/images/icons/search.png')),
+            ),
           ),
-          Positioned(
-            bottom: 27,
-            left: 16,
-            child: Container(
-              width: 113,
-              height: 33,
-              padding:
-                  const EdgeInsets.symmetric(vertical: 7, horizontal: 24),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(width: 1.0, color: Colors.white),
+          Stack(
+            children: [
+              Container(
+                width: double.infinity,
+                height: 159,
+                child: Image.asset('asset/images/banner/main_banner.png',
+                    fit: BoxFit.fitWidth),
               ),
-              child: OutlinedButton(
-                onPressed: () {
-                  print('Clicked!');
-                },
-                style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.all(0),
-                    side: const BorderSide(
-                      width: 0,
-                      color: Colors.transparent,
-                    )),
-                child: const Text(
-                  '설문하러가기',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
+              Positioned(
+                bottom: 27,
+                left: 16,
+                child: Container(
+                  width: 113,
+                  height: 33,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 7, horizontal: 24),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(width: 1.0, color: Colors.white),
+                  ),
+                  child: OutlinedButton(
+                    onPressed: () {
+                      print('Clicked!');
+                    },
+                    style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.all(0),
+                        side: const BorderSide(
+                          width: 0,
+                          color: Colors.transparent,
+                        )),
+                    child: const Text(
+                      '설문하러가기',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
-          ),
-          Positioned(
-            top: 24,
-            left: 16,
-            child: Container(
-              width: 201,
-              height: 56,
-              padding: const EdgeInsets.all(0),
-              child: const Text(
-                '설문 참여하고 \n오마카세 런치 받아가세요',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
+              Positioned(
+                top: 24,
+                left: 16,
+                child: Container(
+                  width: 201,
+                  height: 56,
+                  padding: const EdgeInsets.all(0),
+                  child: const Text(
+                    '설문 참여하고 \n오마카세 런치 받아가세요',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ],
       ),
