@@ -57,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ColoredBox(
             color: Colors.white,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   color: Colors.white,
@@ -65,7 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     focusNode: inputFocus,
                     decoration: InputDecoration(
                       enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
                       hintStyle: const TextStyle(
                         fontSize: 15,
                         color: Color(0XFF94A0B8),
@@ -78,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       height: 159,
                       child: Image.asset('asset/images/banner/main_banner.png',
@@ -90,8 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                         width: 113,
                         height: 33,
-                        padding:
-                            const EdgeInsets.symmetric(vertical: 7, horizontal: 24),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 7, horizontal: 24),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(width: 1.0, color: Colors.white),
@@ -273,10 +275,63 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 8,
                   color: Color(0xFFF8F9FC),
                 ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        '최근 올라온 오마카세',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 16.0,
+                      ),
+                      SizedBox(
+                        width: 140,
+                        height: 231,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Stack(
+                              children: [
+                                SizedBox(
+                                  width: 140,
+                                  height: 168,
+                                  child: Image.asset('asset/images/banner/main_banner.png',
+                                    fit: BoxFit.fill,
+                                      ),
+                                ),
+                              ],
+                            ),
+                            const Text(
+                              '업장 이름',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 18,
+                              ),
+                            ),
+                            const SizedBox(height: 8,),
+                            const Text(
+                              '위치',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
