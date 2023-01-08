@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widget/home_app_bar.dart';
+import '../widget/home_horizontal_list_view.dart';
+
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
 
@@ -13,40 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(56),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: AppBar(
-            backgroundColor: Colors.white,
-            elevation: 0,
-            actions: [
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Image.asset('asset/images/icons/bookmark.png'),
-                    padding: EdgeInsets.zero,
-                    constraints: BoxConstraints.tight(const Size(24, 24)),
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Image.asset('asset/images/icons/notification.png'),
-                    padding: EdgeInsets.zero,
-                    constraints: BoxConstraints.tight(const Size(24, 24)),
-                  ),
-                ],
-              ),
-            ],
-            title: Image.asset('asset/images/logo.png'),
-            titleSpacing: 0,
-            centerTitle: false,
-          ),
-        ),
-      ),
+      appBar: const HomeAppBar(),
       body: GestureDetector(
         onTap: () {
           setState(() {
@@ -150,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: ElevatedButton.styleFrom(
                           shadowColor: Colors.black.withOpacity(0.8),
                           backgroundColor: Colors.white,
-                          padding: EdgeInsets.all(0),
+                          padding: const EdgeInsets.all(0),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
                         ),
@@ -193,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: ElevatedButton.styleFrom(
                           shadowColor: Colors.black.withOpacity(0.8),
                           backgroundColor: Colors.white,
-                          padding: EdgeInsets.all(0),
+                          padding: const EdgeInsets.all(0),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
                         ),
@@ -236,7 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: ElevatedButton.styleFrom(
                           shadowColor: Colors.black.withOpacity(0.8),
                           backgroundColor: Colors.white,
-                          padding: EdgeInsets.all(0),
+                          padding: const EdgeInsets.all(0),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
                         ),
@@ -279,203 +249,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   thickness: 8,
                   color: Color(0xFFF8F9FC),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: const Text(
-                    '최근 올라온 오마카세',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 16.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 16),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                  width: 140,
-                                  height: 231,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Stack(
-                                        children: [
-                                          SizedBox(
-                                            width: 140,
-                                            height: 168,
-                                            child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(8),
-                                              child: Image.asset('asset/images/banner/main_banner.png',
-                                                fit: BoxFit.fill,
-                                              ),
-                                            ),
-                                          ),
-                                          Positioned(
-                                            top: 8,
-                                            right: 8,
-                                            child: IconButton(
-                                              padding: const EdgeInsets.all(0),
-                                              constraints: const BoxConstraints(),
-                                              onPressed: (){
-                                                print('IconButton');
-                                              },
-                                              icon: Image.asset('asset/images/icons/bookmark_circle.png'),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const Text(
-                                        '업장 이름',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 18,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8,),
-                                      const Text(
-                                        '위치',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                  width: 140,
-                                  height: 231,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Stack(
-                                        children: [
-                                          SizedBox(
-                                            width: 140,
-                                            height: 168,
-                                            child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(8),
-                                              child: Image.asset('asset/images/banner/main_banner.png',
-                                                fit: BoxFit.fill,
-                                              ),
-                                            ),
-                                          ),
-                                          Positioned(
-                                            top: 8,
-                                            right: 8,
-                                            child: IconButton(
-                                              padding: const EdgeInsets.all(0),
-                                              constraints: const BoxConstraints(),
-                                              onPressed: (){
-                                                print('IconButton');
-                                              },
-                                              icon: Image.asset('asset/images/icons/bookmark_circle.png'),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const Text(
-                                        '업장 이름',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 18,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8,),
-                                      const Text(
-                                        '위치',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                  width: 140,
-                                  height: 231,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Stack(
-                                        children: [
-                                          SizedBox(
-                                            width: 140,
-                                            height: 168,
-                                            child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(8),
-                                              child: Image.asset('asset/images/banner/main_banner.png',
-                                                fit: BoxFit.fill,
-                                              ),
-                                            ),
-                                          ),
-                                          Positioned(
-                                            top: 8,
-                                            right: 8,
-                                            child: IconButton(
-                                              padding: const EdgeInsets.all(0),
-                                              constraints: const BoxConstraints(),
-                                              onPressed: (){
-                                                print('IconButton');
-                                              },
-                                              icon: Image.asset('asset/images/icons/bookmark_circle.png'),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const Text(
-                                        '업장 이름',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 18,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8,),
-                                      const Text(
-                                        '위치',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                )
+                const HorizontalListView(categoryName: '최근 올라온 오마카세',),
+                const SizedBox(height: 32,),
+                const HorizontalListView(categoryName: '#입문으로 딱인',),
               ],
             ),
           ),
@@ -484,3 +260,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
