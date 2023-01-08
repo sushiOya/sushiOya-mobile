@@ -281,55 +281,199 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        '최근 올라온 오마카세',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 16.0,
-                      ),
-                      SizedBox(
-                        width: 140,
-                        height: 231,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              children: [
-                                SizedBox(
+                  child: const Text(
+                    '최근 올라온 오마카세',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 16.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
                                   width: 140,
-                                  height: 168,
-                                  child: Image.asset('asset/images/banner/main_banner.png',
-                                    fit: BoxFit.fill,
+                                  height: 231,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Stack(
+                                        children: [
+                                          SizedBox(
+                                            width: 140,
+                                            height: 168,
+                                            child: ClipRRect(
+                                              borderRadius: BorderRadius.circular(8),
+                                              child: Image.asset('asset/images/banner/main_banner.png',
+                                                fit: BoxFit.fill,
+                                              ),
+                                            ),
+                                          ),
+                                          Positioned(
+                                            top: 8,
+                                            right: 8,
+                                            child: IconButton(
+                                              padding: const EdgeInsets.all(0),
+                                              constraints: const BoxConstraints(),
+                                              onPressed: (){
+                                                print('IconButton');
+                                              },
+                                              icon: Image.asset('asset/images/icons/bookmark_circle.png'),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                ),
-                              ],
-                            ),
-                            const Text(
-                              '업장 이름',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
+                                      const Text(
+                                        '업장 이름',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8,),
+                                      const Text(
+                                        '위치',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ],
+                                  )
                               ),
-                            ),
-                            const SizedBox(height: 8,),
-                            const Text(
-                              '위치',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 16,
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                  width: 140,
+                                  height: 231,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Stack(
+                                        children: [
+                                          SizedBox(
+                                            width: 140,
+                                            height: 168,
+                                            child: ClipRRect(
+                                              borderRadius: BorderRadius.circular(8),
+                                              child: Image.asset('asset/images/banner/main_banner.png',
+                                                fit: BoxFit.fill,
+                                              ),
+                                            ),
+                                          ),
+                                          Positioned(
+                                            top: 8,
+                                            right: 8,
+                                            child: IconButton(
+                                              padding: const EdgeInsets.all(0),
+                                              constraints: const BoxConstraints(),
+                                              onPressed: (){
+                                                print('IconButton');
+                                              },
+                                              icon: Image.asset('asset/images/icons/bookmark_circle.png'),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const Text(
+                                        '업장 이름',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8,),
+                                      const Text(
+                                        '위치',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ],
+                                  )
                               ),
-                            ),
-                          ],
-                        )
-                      ),
-                    ],
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                  width: 140,
+                                  height: 231,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Stack(
+                                        children: [
+                                          SizedBox(
+                                            width: 140,
+                                            height: 168,
+                                            child: ClipRRect(
+                                              borderRadius: BorderRadius.circular(8),
+                                              child: Image.asset('asset/images/banner/main_banner.png',
+                                                fit: BoxFit.fill,
+                                              ),
+                                            ),
+                                          ),
+                                          Positioned(
+                                            top: 8,
+                                            right: 8,
+                                            child: IconButton(
+                                              padding: const EdgeInsets.all(0),
+                                              constraints: const BoxConstraints(),
+                                              onPressed: (){
+                                                print('IconButton');
+                                              },
+                                              icon: Image.asset('asset/images/icons/bookmark_circle.png'),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const Text(
+                                        '업장 이름',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8,),
+                                      const Text(
+                                        '위치',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],
