@@ -50,22 +50,20 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             Container(
               color: Colors.white,
-              child: Expanded(
-                child: TextField(
-                  focusNode: inputFocus,
-                  decoration: InputDecoration(
-                    enabledBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
-                    ),
-                    hintStyle: const TextStyle(
-                      fontSize: 15,
-                      color: Color(0XFF94A0B8),
-                      fontWeight: FontWeight.w400,
-                    ),
-                    hintText: '찾고있는 오마카세가 있으신가요?',
-                    suffixIcon:
-                    Image.asset('asset/images/icons/search.png'),
+              child: TextField(
+                focusNode: inputFocus,
+                decoration: InputDecoration(
+                  enabledBorder: const UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
                   ),
+                  hintStyle: const TextStyle(
+                    fontSize: 15,
+                    color: Color(0XFF94A0B8),
+                    fontWeight: FontWeight.w400,
+                  ),
+                  hintText: '찾고있는 오마카세가 있으신가요?',
+                  suffixIcon:
+                  Image.asset('asset/images/icons/search.png'),
                 ),
               ),
             ),
