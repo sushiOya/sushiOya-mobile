@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'horizontal_image_list_view.dart';
 import 'restaurant_image_card.dart';
 
 class HorizontalListView extends StatelessWidget {
